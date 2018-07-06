@@ -22,8 +22,8 @@ componentDidMount() {
 
   render(props) {
     return (
-      <div>
-        <h2>{this.props.shelf}</h2>
+      <div className='bookshelf'>
+        <h2 className='bookshelf-heading'>{this.props.shelf}</h2>
         <Books onDeleteBook={this.removeBook} books={this.state.books} />
       </div>
     )
