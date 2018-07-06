@@ -1,3 +1,24 @@
+.app-header {
+  background-color: cornflowerblue;
+  text-align: center;
+  padding: 1em 0 1em 0 
+}
+
+.bookshelf {
+  margin: 0 0 1em 0;
+  border-bottom: solid 1px cornflowerblue;
+}
+
+.bookshelf-heading {
+  margin: 0 0 0 1em;
+  color: cornflowerblue;
+}
+
 .book-list {
   list-style: none;
+  display: flex;
+}
+
+.book-item {
+  margin: 1em 1em 1em 1em;
 }
