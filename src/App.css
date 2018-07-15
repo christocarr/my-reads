@@ -1,7 +1,8 @@
 .app-header {
   background-color: cornflowerblue;
   text-align: center;
-  padding: 1em 0 1em 0 
+  padding: 1em 0 1em 0;
+  margin: 0;
 }
 
 .bookshelf {
@@ -17,8 +18,18 @@
 .book-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .book-item {
   margin: 1em 1em 1em 1em;
+}
+
+.custom-select {
+  background-color: royalblue;
+  width: 4em;
+  position: relative;
+  bottom: 0;
+  right: 4em;
+  z-index: 1001;
 }

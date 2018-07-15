@@ -1,27 +1,36 @@
 import React, { Component } from 'react'
 import './App.css'
-import BookShelves from './BookShelves'
+import BookShelf from './BookShelf'
+import BookSearch from './BookSearch'
+import * as BookAPI from './BookAPI'
 
 class App extends Component {
+
+  state = {
+    books: []
+  }
   
-  // updateQuery = (query) => {
-  //   this.setState({query: query.trim()})
-  // }
+  componentDidMount() {
+    BookAPI.getAll().then((books) => {
+      this.setState({ books })
+      console.log(this.state)
+    })
+  }
+
+  removeBook = (book) => {
+    this.setState ((state) => ({
+      books: state.books.filter((b) => b.id !== book.id)
+    }))
+  }
 
   render() {
     return (
       <div className="App">
-        <div>
-          <input type='text' 
-          placeholder='Search books' 
-          // value={this.state.query}
-          // onChange={(event) => this.updateQuery(event.target.value)}
-          />
-        </div>
           <h1 className='app-header'>My Reads</h1>
-          <BookShelves shelf='Currently Reading' />
-          <BookShelves shelf='Want to Read' />
-          <BookShelves shelf='Read' />
+          <BookSearch />
+          <BookShelf shelf='Currently Reading' books={this.state.books} />
+          <BookShelf shelf='Want to Read' books={this.state.books}/>
+          <BookShelf shelf='Read' books={this.state.books}/>
       </div>
     );
   }
