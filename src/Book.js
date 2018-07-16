@@ -1,22 +1,17 @@
 import React, { Component } from 'react'
+import ShelfChanger from './ShelfChanger'
 
 class Book extends Component {
 
   render() {
+    const { book } = this.props
+    console.log(book.shelf)
     return (
-      <div className='book-list'>
-         {this.props.books.map( (book) => (
-          <li className='book-item' key={book.id}>
-            <img src={book.imageLinks.smallThumbnail} alt={book.title} />
-            
-              <select className='custom-select'>
-                <option value=''>Currently Reading</option>
-                <option value=''>Want to Read</option>
-                <option value=''>Read</option>
-              </select>
-            
-          </li>
-         ))}
+      <div className='book-item'>
+        <div className=''>
+          <img src={book.imageLinks.smallThumbnail} alt={book.title}/>
+          <ShelfChanger shelf={book.shelf}/>
+        </div>
       </div>
     )
   }

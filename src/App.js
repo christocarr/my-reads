@@ -17,20 +17,26 @@ class App extends Component {
     })
   }
 
-  removeBook = (book) => {
-    this.setState ((state) => ({
-      books: state.books.filter((b) => b.id !== book.id)
-    }))
-  }
-
+  
   render() {
     return (
       <div className="App">
           <h1 className='app-header'>My Reads</h1>
-          <BookSearch />
-          <BookShelf shelf='Currently Reading' books={this.state.books} />
-          <BookShelf shelf='Want to Read' books={this.state.books}/>
-          <BookShelf shelf='Read' books={this.state.books}/>
+          <BookSearch 
+             
+          />
+          <BookShelf 
+            shelf='Currently Reading' 
+            books={this.state.books} 
+           />
+          <BookShelf 
+            shelf='Want to Read' 
+            books={this.state.books}
+          />
+          <BookShelf 
+            shelf='Read' 
+            books={this.state.books} 
+          />
       </div>
     );
   }

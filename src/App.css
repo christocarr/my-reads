@@ -27,9 +27,9 @@
 
 .custom-select {
   background-color: royalblue;
-  width: 4em;
+  width: 5em;
   position: relative;
-  bottom: 0;
-  right: 4em;
+  bottom: 1.5em;
+  left: 4.5em;
   z-index: 1001;
 }
