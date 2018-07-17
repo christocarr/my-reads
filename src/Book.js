@@ -5,14 +5,18 @@ class Book extends Component {
 
   render() {
     const { book } = this.props
-    console.log(book.shelf)
     return (
-      <div className='book-item'>
-        <div className=''>
-          <img src={book.imageLinks.smallThumbnail} alt={book.title}/>
-          <ShelfChanger shelf={book.shelf}/>
+      <li>
+        <div className='book-item'>
+          <div className=''>
+            <img src={book.imageLinks.smallThumbnail} alt={book.title}/>
+            <ShelfChanger 
+              shelf={book.shelf}
+              
+            />
+          </div>
         </div>
-      </div>
+      </li>  
     )
   }
 }

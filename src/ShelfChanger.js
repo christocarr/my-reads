@@ -5,7 +5,8 @@ class ShelfChanger extends Component {
   render() {
     return (
       <div className='custom-select'>
-        <select value={this.props.shelf}>
+        <select value={this.props.shelf}
+          >
           <option value='move' disabled>move to...</option>
           <option value='currentlyReading' >Currently Reading</option>
           <option value='wantToRead' >Want to Read</option>

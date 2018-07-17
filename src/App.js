@@ -1,6 +1,7 @@
+//Bookcase that holds all shelves and books
 import React, { Component } from 'react'
 import './App.css'
-import BookShelf from './BookShelf'
+import BookShelves from './BookShelves'
 import BookSearch from './BookSearch'
 import * as BookAPI from './BookAPI'
 
@@ -13,10 +14,10 @@ class App extends Component {
   componentDidMount() {
     BookAPI.getAll().then((books) => {
       this.setState({ books })
-      console.log(this.state)
     })
   }
 
+  
   
   render() {
     return (
@@ -25,18 +26,10 @@ class App extends Component {
           <BookSearch 
              
           />
-          <BookShelf 
-            shelf='Currently Reading' 
+          <BookShelves 
             books={this.state.books} 
            />
-          <BookShelf 
-            shelf='Want to Read' 
-            books={this.state.books}
-          />
-          <BookShelf 
-            shelf='Read' 
-            books={this.state.books} 
-          />
+          
       </div>
     );
   }
