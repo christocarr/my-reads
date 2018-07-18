@@ -14,4 +14,3 @@ The seventh project in Udacity's Frontend Nanodegree which is a virtual bookcase
 A backend server is provided in the location ```scr/BookAPI.js``` which also contains the methods needed to ```fecth``` the required assets.
 
 
-

@@ -37,7 +37,8 @@ class App extends Component {
             books={this.state.books} 
             updateShelf={this.updateShelf}
            />
-          
+          <div className='open-search'>
+          </div>
       </div>
     );
   }

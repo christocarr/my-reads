@@ -7,7 +7,7 @@ class ShelfChanger extends Component {
     const { book, updateShelf } = this.props
 
     return (
-      <div className='custom-select'>
+      <div className='shelf-changer'>
         <select value={this.props.shelf}
           onChange={(e) => updateShelf(book, e.target.value)}>
           <option value='move' disabled>move to...</option>
