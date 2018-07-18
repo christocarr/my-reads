@@ -5,21 +5,19 @@
   margin: 0;
 }
 
-.bookshelf {
-  margin: 0 0 1em 0;
-  border-bottom: solid 1px cornflowerblue;
-}
-
 .bookshelf-heading {
-  margin: 0 0 0 1em;
+  margin: 1.5em 0 0 1em;
   color: cornflowerblue;
 }
 
 .book-list {
+  min-height: 16em;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 1em 0 1em 0;
+  border-bottom: solid 1px cornflowerblue;
 }
 
 .book-item {
