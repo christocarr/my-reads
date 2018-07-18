@@ -5,8 +5,8 @@ class BookSearch extends Component {
   render() {
     return (
       <div>
-        <form className='search-from'>
-          <div className='back-arrow'></div>
+        <form className='search-form'>
+          <button className='back-arrow'></button>
           <input className='search-input'
             type='text'
             placeholder='search for a book'
