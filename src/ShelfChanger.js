@@ -11,6 +11,7 @@ class ShelfChanger extends Component {
           <option value='currentlyReading' >Currently Reading</option>
           <option value='wantToRead' >Want to Read</option>
           <option value='read' >Read</option>
+          <option value='read' >None</option>
         </select>
       </div>
     )
