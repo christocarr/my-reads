@@ -3,13 +3,14 @@ import Book from './Book'
 
 class BookShelf extends Component {
   render() {
-    const { books } = this.props
+    const { books, updateShelf } = this.props
     return(
       <ul className='book-list'>
         {books.map((book) => (
-          <div className='bookshelf' key={book.id}>
+          <div key={book.id}>
             <Book 
               book={book} 
+              updateShelf={updateShelf}
             />
           </div>
         ))}

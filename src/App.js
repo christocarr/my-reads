@@ -17,7 +17,14 @@ class App extends Component {
     })
   }
 
-  
+  updateShelf = (book, shelf) => {
+    BookAPI.update(book, shelf).then((res) => {
+      book.shelf = shelf
+      const updatedBooks = this.state.books.filter(b => b.id !== book.id)
+      updatedBooks.push(book)
+      this.setState({books: updatedBooks})
+    })
+  }
   
   render() {
     return (
@@ -28,6 +35,7 @@ class App extends Component {
           />
           <BookShelves 
             books={this.state.books} 
+            updateShelf={this.updateShelf}
            />
           
       </div>
