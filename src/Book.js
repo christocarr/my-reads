@@ -9,8 +9,8 @@ class Book extends Component {
     const { book, updateShelf } = this.props
 
     return (
-      <li>
-        <div className='book-item'>
+      <li className='book-item'>
+        <div className='book-cover'>
           <div className=''>
             {book.imageLinks ? (
               <img style={{width: 128, height: 193}} src={book.imageLinks.smallThumbnail} alt={book.title}/>
@@ -24,6 +24,8 @@ class Book extends Component {
             />
           </div>
         </div>
+        <div className='book-title'>{book.title}</div>
+        <div className='book-author'>{book.authors}</div>
       </li>  
     )
   }

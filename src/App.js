@@ -35,6 +35,7 @@ class App extends Component {
           <Route path='/search' render={() => (
             <BookSearch 
               searchBooks={this.searchBooks}
+              updateShelf={this.updateShelf}
             />
           )} />
           <Route path='/' exact render={() => (
