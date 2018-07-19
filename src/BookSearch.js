@@ -38,8 +38,8 @@ class BookSearch extends Component {
             />
           </form>         
         </div>
-        <div className='book-list'>
-          <ul>
+        <div>
+          <ul className='book-list'>
             {this.state.books.map((book) => (
               <Book 
                 book={book}

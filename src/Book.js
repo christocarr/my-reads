@@ -13,7 +13,7 @@ class Book extends Component {
         <div className='book-item'>
           <div className=''>
             {book.imageLinks ? (
-              <img src={book.imageLinks.smallThumbnail} alt={book.title}/>
+              <img style={{width: 128, height: 193}} src={book.imageLinks.smallThumbnail} alt={book.title}/>
             ) : ( 
               <img src={placeholder} alt={book.title}/> 
             )}
