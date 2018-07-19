@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import ShelfChanger from './ShelfChanger'
 import placeholder from './images/placeholder.jpg'
 
 class Book extends Component {
+  static propTypes = {
+    updateShelf: PropTypes.func.isRequired,
+    book: PropTypes.object.isRequired
+  }
 
   render() {
 

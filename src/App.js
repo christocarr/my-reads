@@ -34,7 +34,6 @@ class App extends Component {
           <h1 className='app-header'>My Reads</h1>
           <Route path='/search' render={() => (
             <BookSearch 
-              searchBooks={this.searchBooks}
               updateShelf={this.updateShelf}
             />
           )} />

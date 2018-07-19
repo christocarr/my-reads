@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import * as BookAPI from './BookAPI'
 import Book from './Book';
 
 class BookSearch extends Component {
+  static propTypes = {
+    updateShelf: PropTypes.func.isRequired
+  }
 
   state = {
     query: '',
@@ -20,8 +24,6 @@ class BookSearch extends Component {
       })
     }  
   }
-
-  
 
   render() {
     const updateShelf = this.props
@@ -45,7 +47,6 @@ class BookSearch extends Component {
                 book={book}
                 updateShelf={updateShelf}
                 key={book.id}
-                bookImage={this.state.bookImage}
               />
             ))}
           </ul>
