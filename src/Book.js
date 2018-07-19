@@ -4,7 +4,14 @@ import ShelfChanger from './ShelfChanger'
 class Book extends Component {
 
   render() {
+
     const { book, updateShelf } = this.props
+    // let bookImage = book.imageLinks.smallThumbnail
+    
+    // if(!bookImage) {
+    //   bookImage = book.previwLink
+    // }
+
     return (
       <li>
         <div className='book-item'>
