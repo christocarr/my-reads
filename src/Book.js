@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 import ShelfChanger from './ShelfChanger'
+import placeholder from './images/placeholder.jpg'
 
 class Book extends Component {
 
   render() {
 
     const { book, updateShelf } = this.props
-    // let bookImage = book.imageLinks.smallThumbnail
-    
-    // if(!bookImage) {
-    //   bookImage = book.previwLink
-    // }
 
     return (
       <li>
         <div className='book-item'>
           <div className=''>
-            <img src={book.imageLinks.smallThumbnail} alt={book.title}/>
+            {book.imageLinks ? (
+              <img src={book.imageLinks.smallThumbnail} alt={book.title}/>
+            ) : ( 
+              <img src={placeholder} alt={book.title}/> 
+            )}
             <ShelfChanger 
               shelf={book.shelf}
               book={book}
