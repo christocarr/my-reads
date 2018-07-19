@@ -29,8 +29,6 @@
   position: relative;
 }
 
-/*------------- Icon Styling ---------------*/
-
 .open-search {
   background-image: url('./icons/add.svg');
   background-color: royalblue;
@@ -43,12 +41,16 @@
   margin: 0 2em 1em 0;
 }
 
-.search-form {
-  width: 85vw;
-  height: 2.7em;
+.book-search {
+  width: 90vw;
   display: flex;
   align-content: center;
   margin: 1em auto 0 auto;
+}
+
+.search-form {
+  width: 80vw;
+  height: 2.7em;
 }
 
 .search-input {
@@ -63,8 +65,8 @@
   background-image: url('icons/arrow-back.svg');
   background-repeat: no-repeat;
   background-color: white;
-  width: 2.7em;
-  height: 2.7em;
+  width: 2em;
+  height: 2em;
   margin: 0 0.5em 0 0;
   border-radius: 0.2em;
   border: 1px lightgrey solid;
