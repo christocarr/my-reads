@@ -1,5 +1,7 @@
 //Bookcase that holds all shelves and books
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './App.css'
 import BookShelves from './BookShelves'
 import BookSearch from './BookSearch'
@@ -30,15 +32,21 @@ class App extends Component {
     return (
       <div className="App">
           <h1 className='app-header'>My Reads</h1>
-          <BookSearch 
-             
-          />
-          <BookShelves 
-            books={this.state.books} 
-            updateShelf={this.updateShelf}
-           />
-          <div className='open-search'>
-          </div>
+          <Route path='/search' render={() => (
+            <BookSearch 
+            
+            />
+          )} />
+          <Route path='/' exact render={() => (
+            <BookShelves 
+             books={this.state.books} 
+             updateShelf={this.updateShelf}
+            />
+          )} />
+          <Link
+            to='/search'
+            className='open-search'>
+          </Link>
       </div>
     );
   }
