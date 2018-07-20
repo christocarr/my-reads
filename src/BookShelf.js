@@ -15,6 +15,7 @@ class BookShelf extends Component {
         {books.map((book) => (
           <div key={book.id}>
             <Book 
+              books={books}
               book={book} 
               updateShelf={updateShelf}
             />

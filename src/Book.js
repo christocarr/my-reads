@@ -20,7 +20,7 @@ class Book extends Component {
             {book.imageLinks ? (
               <img style={{width: 128, height: 193}} src={book.imageLinks.smallThumbnail} alt={book.title}/>
             ) : ( 
-              <img src={placeholder} alt={book.title}/> 
+              <img style={{width: 128, height: 193}} src={placeholder} alt={book.title}/> 
             )}
             <ShelfChanger 
               shelf={book.shelf}
