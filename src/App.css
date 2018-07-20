@@ -78,6 +78,16 @@
   border: 1px lightgrey solid
 }
 
+.search-error {
+  position: absolute;
+  top: 15em;
+  left: 10em;
+  z-index: 2001;
+  margin: 0 auto 0 auto;
+  width: 70vw;
+  text-align: center;
+}
+
 .back-arrow {
   background-image: url('icons/arrow-back.svg');
   background-repeat: no-repeat;
