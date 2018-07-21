@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+.book-shelf:last-child {
+  display: none;
+}
+
 .bookshelf-heading {
   font-size: 1.6em;
   margin: 1.5em 0 0 1.5em;

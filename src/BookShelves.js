@@ -17,9 +17,13 @@ class BookShelves extends Component {
         title: 'Want to Read'
       },
       {
-        id: 'read', title:'Read'
+        id: 'read', 
+        title:'Read'
+      },
+      {
+        id: 'none', 
+        title: 'none'
       }
-
     ]
     
     return (
@@ -28,7 +32,7 @@ class BookShelves extends Component {
           const shelfBooks = books.filter(book => book.shelf === shelf.id)
 
           return (
-            <div key={id}>
+            <div key={id} className='book-shelf'>
               <h2 className='bookshelf-heading'>{shelf.title}</h2>
               <BookShelf 
                 books={shelfBooks}

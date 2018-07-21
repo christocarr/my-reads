@@ -12,7 +12,8 @@ class Book extends Component {
   render() {
 
     const { book, updateShelf } = this.props
-
+    console.log(book.shelf)
+    console.log()
     return (
       <li className='book-item'>
         <div className='book-cover'>

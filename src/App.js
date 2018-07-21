@@ -1,4 +1,4 @@
-//Bookcase that holds all shelves and books
+
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
