@@ -12,7 +12,7 @@ class BookSearch extends Component {
 
   state = {
     query: '',
-    books: [],
+    searchedBooks: [],
     err: false
   }
 
@@ -21,10 +21,10 @@ class BookSearch extends Component {
     this.setState({query})
     if (query) {
       BookAPI.search(query).then((res) => {
-        res.length > 0 ? this.setState({books: res}) : this.setState({books:[], err: true})
+        res.length > 0 ? this.setState({searchedBooks: res}) : this.setState({searchedBooks:[], err: true})
       })
     } else {
-      this.setState({books: [], err: false 
+      this.setState({searchedBooks: [], err: false 
       })
     }
   }
@@ -46,7 +46,7 @@ class BookSearch extends Component {
         </div>
         <div>
           <ul className='book-list'>
-            {this.state.books.map((book) => (
+            {this.state.searchedBooks.map((book) => (
               <Book 
                 books={books}
                 book={book}
