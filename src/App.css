@@ -4,6 +4,8 @@
   text-align: center;
   padding: 1em 0 1em 0;
   margin: 0;
+  -webkit-text-stroke: 1px black;
+  font-size: 2.5em;
 }
 
 .book-shelf:last-child {
@@ -51,15 +53,20 @@
 }
 
 .open-search {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
   background-image: url('./icons/add.svg');
   background-color: royalblue;
-  display: block;
   width: 2.7em;
   height: 2.7em;
   border-radius: 50%;
-  float: right;
   cursor: pointer;
   margin: 0 2em 1em 0;
+}
+
+.close-search {
+  display: none;
 }
 
 .book-search {
