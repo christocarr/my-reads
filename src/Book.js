@@ -11,9 +11,8 @@ class Book extends Component {
 
   render() {
 
-    const { book, updateShelf } = this.props
-    console.log(book.shelf)
-    console.log()
+    const { book, books, updateShelf } = this.props
+  
     return (
       <li className='book-item'>
         <div className='book-cover'>
@@ -24,8 +23,8 @@ class Book extends Component {
               <img style={{width: 128, height: 193}} src={placeholder} alt={book.title}/> 
             )}
             <ShelfChanger 
-              shelf={book.shelf}
               book={book}
+              books={books}
               updateShelf={updateShelf}
             />
           </div>

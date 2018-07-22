@@ -31,6 +31,7 @@ class BookSearch extends Component {
 
   render() {
     const { books, updateShelf } = this.props
+  
     return (
       <div>
         <div className='book-search'>
