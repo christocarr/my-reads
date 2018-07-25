@@ -44,10 +44,12 @@ class App extends Component {
              updateShelf={this.updateShelf}
             />
           )} />
-          <Link
-            to='/search'
-            className='open-search'>
-          </Link>
+          {window.location.pathname !== '/search' && (
+            <Link
+              to='/search'
+              className='open-search'>
+            </Link>
+          )}
       </div>
     );
   }
